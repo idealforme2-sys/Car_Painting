@@ -1,0 +1,62 @@
+﻿@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Premium Resets & Lenis Smooth Scroll */
+        ::selection { background: #dc2626; color: #ffffff; }
+        html.lenis { height: auto; }
+        .lenis.lenis-smooth { scroll-behavior: auto; }
+        .lenis.lenis-smooth[data-lenis-prevent] { overscroll-behavior: contain; }
+        .lenis.lenis-stopped { overflow: hidden; }
+        body { background-color: #09090b; color: #e2e8f0; overflow-x: hidden; cursor: none; }
+        
+        /* Subtle Noise Overlay for "Carbon/Matte" feel */
+        .noise-overlay { position: fixed; inset: 0; pointer-events: none; z-index: 9999; opacity: 0.03; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"); }
+
+        /* Custom Automotive Cursor */
+        #cursor, #cursor-follower { position: fixed; top: 0; left: 0; border-radius: 50%; pointer-events: none; z-index: 10000; transform: translate(-50%, -50%); transition: width 0.3s, height 0.3s, background-color 0.3s; }
+        #cursor { width: 6px; height: 6px; background-color: #dc2626; }
+        #cursor-follower { width: 36px; height: 36px; border: 1px solid rgba(220, 38, 38, 0.5); transition: transform 0.1s; }
+        .hover-active #cursor { background-color: transparent; }
+        .hover-active #cursor-follower { width: 70px; height: 70px; background-color: rgba(220, 38, 38, 0.1); border-color: #dc2626; mix-blend-mode: screen; backdrop-filter: blur(2px); }
+
+        /* Hide Scrollbar */
+        ::-webkit-scrollbar { width: 0px; background: transparent; }
+
+        /* Floating Inputs (High-End Form) */
+        .input-group { position: relative; margin-bottom: 2rem; }
+        .input-group input, .input-group textarea, .input-group select { width: 100%; background: #121214; border: 1px solid #27272a; padding: 18px 24px; color: #e2e8f0; font-family: 'Manrope', sans-serif; transition: all 0.3s; outline: none; border-radius: 6px; }
+        .input-group label { position: absolute; top: 18px; left: 24px; color: #71717a; pointer-events: none; transition: 0.3s ease all; font-family: 'Manrope', sans-serif; font-size: 0.95rem; }
+        .input-group input:focus, .input-group textarea:focus, .input-group select:focus { border-color: #dc2626; box-shadow: 0 0 20px rgba(220, 38, 38, 0.15); background: #09090b; }
+        .input-group input:focus ~ label, .input-group input:valid ~ label,
+        .input-group textarea:focus ~ label, .input-group textarea:valid ~ label,
+        .input-group select:focus ~ label, .input-group select:valid ~ label { top: -10px; left: 12px; font-size: 0.75rem; color: #dc2626; background: #09090b; padding: 0 8px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; }
+
+        /* GSAP Utility Classes */
+        .clip-reveal { clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); }
+        .text-mask { overflow: hidden; display: block; }
+        .text-mask-inner { display: block; transform: translateY(100%); opacity: 0; }
+
+        /* Buttons */
+        .btn-primary { display: inline-flex; justify-content: center; align-items: center; position: relative; overflow: hidden; background: #dc2626; color: #fff; padding: 1rem 2.5rem; font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 600; cursor: pointer; transition: all 0.4s; z-index: 1; border-radius: 4px; box-shadow: 0 4px 20px rgba(220, 38, 38, 0.3); }
+        .btn-primary::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: #991b1b; transform: scaleX(0); transform-origin: right; transition: transform 0.5s cubic-bezier(0.86, 0, 0.07, 1); z-index: -1; }
+        .btn-primary:hover::before { transform: scaleX(1); transform-origin: left; }
+        .btn-primary:hover { box-shadow: 0 6px 30px rgba(220, 38, 38, 0.5); }
+        
+        .btn-outline { display: inline-flex; justify-content: center; align-items: center; position: relative; overflow: hidden; border: 1px solid rgba(220, 38, 38, 0.5); color: #fff; padding: 1rem 2.5rem; font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 1px; font-weight: 500; cursor: pointer; transition: all 0.4s; z-index: 1; border-radius: 4px; backdrop-filter: blur(4px); }
+        .btn-outline:hover { background: rgba(220, 38, 38, 0.15); border-color: #ef4444; }
+
+        /* Service Cards */
+        .service-card { border: 1px solid rgba(255,255,255,0.04); background: linear-gradient(180deg, #18181b 0%, #09090b 100%); transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .service-card:hover { border-color: rgba(220, 38, 38, 0.3); transform: translateY(-8px); box-shadow: 0 25px 50px rgba(220,38,38,0.08); }
+        
+        /* Grid Pattern */
+        .bg-grid { background-size: 50px 50px; background-image: linear-gradient(to right, rgba(255, 255, 255, 0.015) 1px, transparent 1px), linear-gradient(to bottom, rgba(255, 255, 255, 0.015) 1px, transparent 1px); }
+        
+        /* Timeline line */
+        .timeline-line::before { content: ''; position: absolute; left: 24px; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom, #dc2626, rgba(220, 38, 38, 0.05)); z-index: 0; }
+
+        /* FAQ Accordion Transitions */
+        .faq-content { max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+        .faq-icon { transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+
