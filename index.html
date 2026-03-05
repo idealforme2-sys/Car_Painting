@@ -22,13 +22,9 @@
 
 <body class="antialiased bg-carbon text-silver">
     <!-- Preloader -->
-    <div id="preloader"
-        class="fixed inset-0 z-[100] bg-carbon flex justify-center items-center transition-opacity duration-500 ease-in-out">
-        <div class="relative w-24 h-24 flex justify-center items-center">
-            <div class="absolute inset-0 rounded-full border-t-2 border-racingRed animate-spin"></div>
-            <div class="absolute inset-2 rounded-full border-t-2 border-white/50 animate-spin animation-delay-150">
-            </div>
-            <div class="font-heading text-racingRed text-xl font-bold tracking-widest uppercase">RPP</div>
+    <div id="preloader" class="fixed inset-0 z-[100] bg-carbon flex justify-center items-center transition-opacity duration-500 ease-in-out">
+        <div class="text-4xl md:text-6xl font-heading font-bold text-white tracking-[0.2em] uppercase animate-pulse">
+            Revive <span class="text-racingRed">Paint & Panel</span>
         </div>
     </div>
     <div class="noise-overlay"></div>
@@ -79,7 +75,7 @@
             <div class="absolute inset-0 bg-gradient-to-r from-carbon via-carbon/80 to-transparent z-10"></div>
             <div class="absolute inset-0 bg-gradient-to-t from-carbon via-transparent to-carbon z-10"></div>
             <img src="Revive_Ver2.jpg" alt="Premium Car Repair Adelaide"
-                class="w-full h-[120%] object-cover transform -translate-y-[15%] hero-img opacity-50"
+                class="w-full h-full object-cover hero-img opacity-50"
                 style="object-position: 60% 40%;" />
             <div
                 class="absolute top-1/2 left-1/4 w-[800px] h-[800px] bg-racingRed/10 rounded-full blur-[150px] -translate-y-1/2 -translate-x-1/2 z-10">
@@ -252,7 +248,7 @@
                 <div class="service-card rounded-xl overflow-hidden group flex flex-col relative cursor-hover fade-up"
                     style="transition-delay: 0.1s;">
                     <div class="h-60 relative overflow-hidden">
-                        <img src="insurance_claims.png" alt="Insurance Claims"
+                        <img src="revive.jpg" alt="Insurance Claims"
                             class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000">
                         <div class="absolute inset-0 bg-gradient-to-t from-carbon via-carbon/50 to-transparent"></div>
                         <div
@@ -340,7 +336,7 @@
                 <!-- Service 4: Dealership -->
                 <div class="service-card rounded-xl overflow-hidden group flex flex-col relative cursor-hover fade-up">
                     <div class="h-60 relative overflow-hidden">
-                        <img src="dealership_fleet.png" alt="Dealership & Fleet"
+                        <img src="dealership.jpg" alt="Dealership & Fleet"
                             class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000">
                         <div class="absolute inset-0 bg-gradient-to-t from-carbon via-carbon/50 to-transparent"></div>
                         <div
@@ -623,13 +619,13 @@
                     <button
                         class="absolute bottom-4 left-4 w-10 h-10 bg-black/40 backdrop-blur rounded-full flex items-center justify-center text-white/80 hover:text-white hover:bg-black/60 transition-all z-10"
                         onclick="toggleMute('video-0', event)">
-                        <svg class="mute-icon hidden" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        <svg class="mute-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2">
                             <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
                             <line x1="23" y1="9" x2="17" y2="15"></line>
                             <line x1="17" y1="9" x2="23" y2="15"></line>
                         </svg>
-                        <svg class="unmute-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        <svg class="unmute-icon hidden" width="20" height="20" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2">
                             <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
                             <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
@@ -735,13 +731,13 @@
                     <button
                         class="absolute bottom-4 left-4 w-10 h-10 bg-black/40 backdrop-blur rounded-full flex items-center justify-center text-white/80 hover:text-white hover:bg-black/60 transition-all z-10"
                         onclick="toggleMute('video-1', event)">
-                        <svg class="mute-icon hidden" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        <svg class="mute-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2">
                             <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
                             <line x1="23" y1="9" x2="17" y2="15"></line>
                             <line x1="17" y1="9" x2="23" y2="15"></line>
                         </svg>
-                        <svg class="unmute-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        <svg class="unmute-icon hidden" width="20" height="20" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2">
                             <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
                             <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
@@ -833,13 +829,13 @@
                     <button
                         class="absolute bottom-4 left-4 w-10 h-10 bg-black/40 backdrop-blur rounded-full flex items-center justify-center text-white/80 hover:text-white hover:bg-black/60 transition-all z-10"
                         onclick="toggleMute('video-2', event)">
-                        <svg class="mute-icon hidden" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        <svg class="mute-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2">
                             <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
                             <line x1="23" y1="9" x2="17" y2="15"></line>
                             <line x1="17" y1="9" x2="23" y2="15"></line>
                         </svg>
-                        <svg class="unmute-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        <svg class="unmute-icon hidden" width="20" height="20" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2">
                             <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
                             <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
@@ -1135,7 +1131,9 @@
 
                     </div>
                 </div>
-            </section>\n\n <!-- Google Map -->
+            </section>
+
+ <!-- Google Map -->
             <div
                 class="w-full h-[450px] rounded-2xl overflow-hidden border border-white/10 shadow-2xl relative fade-up mt-10">
                 <div class="absolute inset-0 bg-carbon/20 pointer-events-none mix-blend-overlay z-10"></div>
@@ -1317,12 +1315,12 @@
 
             if (video.muted) {
                 video.muted = false;
-                muteIcon.classList.remove('hidden');
-                unmuteIcon.classList.add('hidden');
-            } else {
-                video.muted = true;
                 muteIcon.classList.add('hidden');
                 unmuteIcon.classList.remove('hidden');
+            } else {
+                video.muted = true;
+                muteIcon.classList.remove('hidden');
+                unmuteIcon.classList.add('hidden');
             }
         }
     </script>
