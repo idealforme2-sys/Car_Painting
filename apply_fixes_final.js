@@ -8,7 +8,9 @@ let html = '';
 let postIdx = 0;
 let reelIdx = 0;
 
-for (let i = 0; i < 16; i++) {
+mediaInfo.reels = mediaInfo.reels.slice(0, -4); // Remove last 4 reels
+
+for (let i = 0; i < 12; i++) {
     // Alternate post and reel, or use the other if one runs out
     if ((i % 2 === 0 || reelIdx >= mediaInfo.reels.length) && postIdx < mediaInfo.posts.length) {
         const post = mediaInfo.posts[postIdx];
